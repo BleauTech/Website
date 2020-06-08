@@ -1,0 +1,126 @@
+{%extends 'base/base.html'%}
+{%load static%}
+
+{%block title%}
+About
+{%endblock%}
+
+
+{%block content%}
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg align-items-center">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-sm-6">
+                    <div class="breadcrumb_tittle">
+                        <p>home . about us</p>
+                        <h2>about us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+  
+    <!-- about part start-->
+    <section class="about_part section_padding">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-6">
+            <div class="about_part_text">
+              <h5>Our Story</h5>
+              <h3>Good companies adapt to shifting market trends. Great companies shape them.</h3>
+              <p>
+                We're constantly pushing the envelope so that we don’t just stay ahead of the tech industry:
+                 we drive it forward. Bleautech was founded on January, 01, 2020 to be a different kind of digital services company,
+                  so we’ve made it our mission to do more than just build software. We create tools that empower users and change lives. 
+                  We're committed to building usable digital products, so we don't measure our success just in profits, but by our impact.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about_part_img">
+              <img src="{%static 'img/banner3.jpg'%}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about part end-->
+
+    <!-- about part start-->
+    <section class="creative padding_bottom">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-start">
+          <div class="col-md-6 col-xl-6">
+            <div class="creative_img">
+              <img src="{%static 'img/banner2.png'%}" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6 ftco-animate p-md-5">
+		    		<div class="row">
+		          <div class="col-md-12 nav-link-wrap mb-5">
+		            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		              <a class="nav-link active" id="v-pills-whatwedo-tab" data-toggle="pill" href="#v-pills-whatwedo" role="tab" aria-controls="v-pills-whatwedo" aria-selected="true">What we do</a>
+
+		              <a class="nav-link" id="v-pills-mission-tab" data-toggle="pill" href="#v-pills-mission" role="tab" aria-controls="v-pills-mission" aria-selected="false">Our mission</a>
+
+		              <a class="nav-link" id="v-pills-goal-tab" data-toggle="pill" href="#v-pills-goal" role="tab" aria-controls="v-pills-goal" aria-selected="false">Our goal</a>
+		            </div>
+		          </div>
+		          <div class="col-md-12 d-flex align-items-center">
+		            
+		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+		              <div class="tab-pane fade show active" id="v-pills-whatwedo" role="tabpanel" aria-labelledby="v-pills-whatwedo-tab">
+		              	<div>
+			                <h2 class="mb-4">We Offer High Quality Services</h2>
+			              	<p>We are defined by our passion, positive people who make up our team. We’re
+                        ambitious, but no one runs alone. Our people live and breathe the collaborative
+                        professionalism that drives our Company forward.</p>
+				            </div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-mission" role="tabpanel" aria-labelledby="v-pills-mission-tab">
+		                <div>
+			                <h2 class="mb-4">Bringing Innovative Ideas to life</h2>
+			              	<p>We're serious about changing the world. Bleautech was found to be a different kind of digital services company,
+                         so we’ve made it our mission to do more than just build software. We create tools that empower users and change lives. 
+                         We're committed bringing innovative ideas to life, so we don't measure our success just in profits, but by our impact.</p>
+				            </div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-goal" role="tabpanel" aria-labelledby="v-pills-goal-tab">
+		                <div>
+			                <h2 class="mb-4">To Help All kinds of Businesses</h2>
+			              	<p>Our goal is to ensure that good usable softwares are designed and built for people. We help both small, mid-scale and large business grow 
+                      by giving them the voice they need in order to be noticed by their audience.
+                      </p>
+				            </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+        </div>
+      </div>
+    </section>
+    <!-- about part end-->
+
+ 
+
+    <!--::cta_part start::-->
+    <div class="cta_part">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="cta_iner">
+              <h1>Let’s create something awesome together</h1>
+              <a href="{%url 'contact'%}" class="btn_1">Discuss project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--::cta_part end::-->
+
+   {%endblock%}

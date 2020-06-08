@@ -1,0 +1,318 @@
+
+{%extends 'base/base.html'%}
+{%load static%}
+{%block title%}
+    Bleautech-Home
+{%endblock%}
+{%block content%}
+    <!-- banner part start-->
+    <section class="banner_part">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 offset-lg-1">
+            <div class="banner_text">
+              <div class="banner_text_iner">
+                <h5>Hello There, let's Help Design your</h5>
+                <h1>Digital and innovative ideas</h1>
+                <a href="{%url 'contact'%}" class="btn btn_1">Hire Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner part start-->
+
+    <!--::client logo part end::-->
+    <section class="client_logo">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div
+              class="client_logo_slider owl-carousel d-flex justify-content-between"
+            >
+              <div class="single_client_logo">
+                <img src="{% static 'img/logo/Logo1.png'%}" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="{% static 'img/logo/Logo2.png'%}" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="{% static 'img/logo/Logo3.png'%}" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="{% static 'img/logo/Logo4.png'%}" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="{% static 'img/logo/Logo5.png'%}" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="{% static 'img/logo/Logo6.png'%}" alt="" />
+              </div>
+              <div class="single_client_logo">
+                <img src="{% static 'img/logo/Logo1.png'%}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--::client logo part end::-->
+
+    <!-- about part start-->
+    <section class="about_part section_padding">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md-6">
+            <div class="about_part_text">
+              <h3>We're a Digital design and development company</h3>
+              <p>
+                We design and develop softwares to solve problems. Software has the potential to change lives, 
+                so we've made it our business to create innovative digital tools that allow users to perform at their maximum potential.
+              </p>
+              <a href="{%url 'services'%}" class="btn_1">What we do</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about_part_img">
+              <img src="{% static 'img/banner.jpg'%}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about part end-->
+
+    <!-- our_service start-->
+    <section class="our_service">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-xl-4">
+            <div class="single_feature">
+              <div class="single_service">
+                <span>01</span>
+                <h4>
+                  User Experience <br />
+                  Design
+                </h4>
+                <p>
+                  We inspire possibility by being able to apply innovation to creativity, make
+                  experiences consistent yet personalized and capture intuitiveness, user-friendliness and
+                  engagement in each and every digital asset delivered.
+                </p>
+                <ul>
+                  <li><a href="#">Branding and Identity Designs.</a></li>
+                  <li><a href="#">UI/UX Designs</a></li>
+                  <li><a href="#">User Research Design Strategy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-4">
+            <div class="single_feature">
+              <div class="single_service">
+                <span>02</span>
+                <h4>Software Development</h4>
+                <p>
+                  Our Developers have unmatched expertise and experience
+                  in creating and supporting professional, innovative and highly customized web and mobile application
+                   design and development services to our clients.
+                </p>
+                <ul>
+                  <li><a href="#">Software Development Outsourcing</a></li>
+                  <li><a href="#">Mobile App Development</a></li>
+                  <li><a href="#">Web App Development</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-4">
+            <div class="single_feature">
+              <div class="single_service">
+                <span>03</span>
+                <h4>Digital Marketing and Content Strategy</h4>
+                <p> we work to increase your brand’s online presence in a meaningful way. Our marketing methods
+                  are proven to provide the best results for your business.
+                </p>
+                <ul>
+                  <li><a href="#">Search Engine Optimization</a></li>
+                  <li><a href="#">Social media Marketing</a></li>
+                  <li><a href="#">Email marketing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our_service part end-->
+
+    <!-- our_project part start-->
+    <section class="our_project section_padding" id="portfolio">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-4">
+            <div class="section_tittle">
+              <p>our project</p>
+              <h2>Our Projects</h2>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="filters portfolio-filter project_menu_item">
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="more_btn d-none d-md-block">
+              <a href="{%url 'project'%}" class="more_btn_iner">more projects</a>
+            </div>
+          </div>
+        </div>
+        <div class="filters-content">
+          <div class="row justify-content-between portfolio-grid">
+            <div class="col-lg-6 col-sm-6 all buildings">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{% static 'img/project_1.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web development</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 all rebuild">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{% static 'img/project_2.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web design</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="{% static 'img/animate_icon/icon_2.png'%}" class="animation_icon_2" alt="">
+    </section>
+    <!-- our_project part end-->
+
+    <!-- about part start-->
+    <section class="creative padding_bottom">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-start">
+          <div class="col-md-6 col-xl-6">
+            <div class="creative_img">
+              <img src="{% static 'img/about.jpg'%}" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-5">
+            <div class="creative_part_text">
+              <h2>We work hard and think creatively</h2>
+              <p>
+                It's our mission to build software with a soul - tools that empower communities and make a difference 
+                - so we can create a world where good software powers the things that matter.
+              </p>
+              <span
+                >“If We aren't here to put a dent on the universe, then why else are we here"</span
+              >
+              <a
+                href="https://www.youtube.com/watch?v=tDiJnd7SM2Y"
+                class="popup-youtube"
+                ><i class="ti-control-play"></i> See how we work</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about part end-->
+
+    <!--::review_part end::-->
+    <div class="review_part padding_bottom" id="testimonial">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-7">
+            <div class="section_tittle text-center">
+              <p>Testimonials</p>
+              <h2>What our Client say</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="review_part_text owl-carousel">
+              <div class="singler_eview_part">
+                <div class="client_info">
+                  <img src="{%static 'img/client_1.png'%}" alt="" />
+                  <h4>Justine Miller</h4>
+                  <p>Web developer at Envato</p>
+                </div>
+                <p>
+                  “There winged grass midst moving earth seed herb fifth you
+                  multiply you divide cattle stars first cattle was had spirit
+                  you're thing, night darkness. Which itself stars creature.
+                </p>
+              </div>
+              <div class="singler_eview_part">
+                <div class="client_info">
+                  <img src="{% static 'img/client_2.png' %}" alt="" />
+                  <h4>Danny Jonson</h4>
+                  <p>Creative director at Apple</p>
+                </div>
+                <p>
+                  “There winged grass midst moving earth seed herb fifth you
+                  multiply you divide cattle stars first cattle was had spirit
+                  you're thing, night darkness. Which itself stars creature.
+                </p>
+              </div>
+              <div class="singler_eview_part">
+                <div class="client_info">
+                  <img src="{%static 'img/client_1.png'%}" alt="" />
+                  <h4>Justine Miller</h4>
+                  <p>Web developer at Envato</p>
+                </div>
+                <p>
+                  “There winged grass midst moving earth seed herb fifth you
+                  multiply you divide cattle stars first cattle was had spirit
+                  you're thing, night darkness. Which itself stars creature.
+                </p>
+              </div>
+              <div class="singler_eview_part">
+                <div class="client_info">
+                  <img src="{%static 'img/client_2.png'%}" alt="" />
+                  <h4>Danny Jonson</h4>
+                  <p>Creative director at Apple</p>
+                </div>
+                <p>
+                  “There winged grass midst moving earth seed herb fifth you
+                  multiply you divide cattle stars first cattle was had spirit
+                  you're thing, night darkness. Which itself stars creature.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="{%static 'img/animate_icon/icon_3.png'%}" class="animation_icon_3" alt="">
+    </div>
+    <!--::review_part end::-->
+
+    <!--::cta_part start::-->
+    <div class="cta_part">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="cta_iner">
+              <h1>Let’s create something awesome together</h1>
+              <a href="{%url 'contact'%}" class="btn_1">Discuss project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--::cta_part end::-->
+
+ {%endblock%}

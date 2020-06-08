@@ -1,0 +1,130 @@
+{%extends 'base/base.html'%}
+{%load static%}
+
+{%block title%}
+Projects
+{%endblock%}
+
+
+{%block content%}
+
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg align-items-center">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-sm-6">
+            <div class="breadcrumb_tittle">
+              <p>home . project</p>
+              <h2>project</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- breadcrumb start-->
+
+    <!-- our_project part start-->
+    <section class="our_project section_padding single_page_project" id="portfolio">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-6">
+            <div class="filters portfolio-filter project_menu_item text-center">
+              <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".buildings">Web Design</li>
+                <li data-filter=".rebuild">Mobile App</li>
+                <li data-filter=".Digital">Digital marketing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="filters-content">
+          <div class="row justify-content-between portfolio-grid">
+            <div class="col-lg-6 col-sm-6 all buildings">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{%static 'img/project_1.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web development</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 all rebuild">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{%static 'img/project_2.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web design</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 all Digital">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{%static 'img/project_3.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web development</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 all rebuild">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{%static 'img/banner1.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web design</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 all buildings">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{%static 'img/project_5.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web development</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 all Digital">
+              <div class="single_our_project">
+                <div class="single_offer">
+                  <img src="{%static 'img/project_6.png'%}" alt="offer_img_1" />
+                  <div class="hover_text">
+                    <p>Web design</p>
+                    <a href="#"><h2>Web design & development</h2></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our_project part end-->
+
+    <!--::cta_part start::-->
+    <div class="cta_part">
+        <div class="container">
+            <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="cta_iner">
+                <h1>Let’s create something awesome together</h1>
+                <a href="{%url 'contact'%}" class="btn_1">Discuss project</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--::cta_part end::-->
+
+  {%endblock%}
