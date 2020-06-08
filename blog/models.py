@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User 
 import datetime
+from PIL import Image
+
 
 # Create your models here.
 
@@ -24,6 +26,16 @@ class BlogPost(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('post_detail', args=[self.slug,])
+
+
+	def save(self):
+		super().save()
+
+		img=Image.open(self.image.path)
+		if img.height>300 or img.width>300:
+			img.thumbnail((400,400))
+			img.save(self.image.path)
+ 
 
 # convinience function to get the month name
 	def get_month_name(self):
