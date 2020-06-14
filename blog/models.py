@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User 
 import datetime
 from PIL import Image
+from taggit.managers import TaggableManager
 
 
 # Create your models here.
@@ -9,6 +10,9 @@ from PIL import Image
 
 
 class BlogPost(models.Model):
+
+	tags = TaggableManager()
+
 	author=models.ForeignKey(User, 
 		on_delete=models.CASCADE,
 		 related_name='blog_post')
@@ -70,9 +74,10 @@ class BlogPost(models.Model):
 
 class Comment(models.Model):
 	post=models.ForeignKey(BlogPost, on_delete=models.CASCADE, 
-		related_name='comments')
+		related_name='comments', null=True, blank=True)
 	name=models.CharField(max_length=100)
-	body=models.TextField()
+	comment=models.TextField()
+	email=models.EmailField()
 	created=models.DateTimeField(auto_now_add=True)
 	updated=models.DateTimeField(auto_now=True)
 	

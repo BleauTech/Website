@@ -1,0 +1,13 @@
+{%if messages%}
+
+
+<div style="height: 0px; text-align: center; font-weight: bolder;">
+	<ul>
+		{%for message in messages%}
+		<li {%if message.tags%} class="alert alert-{{message.tags}}" {%endif%}>{% if "html_safe" in message.tags%}{{message|safe}}{%else%}{{message}}!!{%endif%}</li>
+		{%endfor%}
+	</ul>
+</div>
+
+
+{%endif%}

@@ -16,6 +16,6 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-	list_display=('name', 'body', 'post')
+	list_display=('name', 'comment', 'post')
 	list_filter=('created', 'post')
 	search_fields=('name', 'body',)
