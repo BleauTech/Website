@@ -68,28 +68,50 @@ Blog-BleauTech
 
 
 
+                        <!-- pagination -->
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
+
+                                {%if posts.has_previous%}
+                                <li  class="page-item" ><a href="?page=1" class="page-link">First</a></li>
                                 <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Previous">
+                                    <a href="?page={{posts.previous_page_number}}" class="page-link" aria-label="Previous">
                                         <i class="ti-angle-left"></i>
                                     </a>
                                 </li>
+                                {%endif%}
+
+                                {%for num in posts.paginator.page_range%}
+                                    {%if num == posts.number %}
+                                        <li class="page-item active">
+                                            <a href="?page={{num}}" class="page-link">{{num}}</a>
+                                        </li>
+                                    {%endif%}
+                                    {%if num < posts.number|add:'3' and num > posts.number|add:'-3' and num != posts.number %}
+                                        <li class="page-item ">
+                                            <a href="?page={{num}}" class="page-link">{{num}}</a>
+                                        </li>
+                                    {%endif%}
+                                {%endfor%}
+
+                                {%if posts.has_next%}
                                 <li class="page-item">
-                                    <a href="#" class="page-link">1</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Next">
+                                    <a href="?page={{posts.next_page_number}}" class="page-link" aria-label="Next">
                                         <i class="ti-angle-right"></i>
                                     </a>
                                 </li>
+                                <li class="page-item">
+                                    <a href="?page={{posts.paginator.num_pages}}" class="page-link">Last</a>
+                                </li>
+                                {%endif%}
+
                             </ul>
                         </nav>
                     </div>
                 </div>
+                <!-- pagination ends -->
+
+
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">

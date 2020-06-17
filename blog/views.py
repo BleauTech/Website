@@ -4,7 +4,7 @@ from taggit.models import Tag
 from blog.form import CommentForm
 from pprint import pprint
 from django.contrib import messages
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
 
@@ -16,8 +16,22 @@ def post_list_view(request, tag_slug=None):
 		tag = get_object_or_404(Tag, slug=tag_slug)
 		posts=BlogPost.objects.filter(tags__in=[tag])
 
-	context={'posts':posts, 'tag':tag, 'all_tags':all_tags}
+
+	paginator = Paginator(posts, 2)
+	page = request.GET.get('page')
+	try:
+		posts = paginator.page(page)
+	except PageNotAnInteger:
+ 	# If page is not an integer deliver the first page
+		posts = paginator.page(1)
+	except EmptyPage:
+ 	# If page is out of range deliver last page of results
+		posts = paginator.page(paginator.num_pages)
+
+	context={'posts':posts, 'page':page, 'tag':tag, 'all_tags':all_tags}
 	return render(request, 'blog/blog.html', context)
+
+
 
 
 
@@ -50,7 +64,3 @@ def post_detail_view(request, pk):
 			'commentform':commentform}
 
 	return render(request, 'blog/single-blog1.html', context)
-
-
-
-
