@@ -1,8 +1,8 @@
-# <img src="![Bleau logo](https://user-images.githubusercontent.com/57163971/84960040-8f40fb80-b0f8-11ea-937f-d7d7a544949c.png)
-"> Website
-Our Official Website (Python/Django Based)
+<img src="https://user-images.githubusercontent.com/57163971/84960040-8f40fb80-b0f8-11ea-937f-d7d7a544949c.png">
 
-## How to run this project locall on your machine
+# BleauTech Official Website (Python/Django Based)
+
+## How to run this project local on your machine
 ### First Method(create virtual enviroment) - Reccommended
 <ul>
 	<li>you need to have python installed on your machine
