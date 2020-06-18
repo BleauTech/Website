@@ -1668,13 +1668,15 @@ ul {
 
 /* line 1119, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_blog.scss */
 .single-post-area .navigation-top {
-  padding-top: 15px;
+  padding-top: 0px;
   border-top: 1px solid #f0e9ff;
+  margin-top: 80px;
 }
 
 /* line 1123, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_blog.scss */
 .single-post-area .navigation-top p {
   margin-bottom: 0;
+
 }
 
 /* line 1127, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_blog.scss */
@@ -1774,8 +1776,8 @@ ul {
 /* line 1218, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_blog.scss */
 .single-post-area .navigation-area {
   border-bottom: 1px solid #eee;
-  padding-bottom: 30px;
-  margin-top: 55px;
+  padding-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* line 1223, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_blog.scss */
@@ -3930,19 +3932,23 @@ ul {
   background-color: #fff;
   padding: 100px 0 20px;
   position: relative;
+  z-index: 0;
 }
 
 /* line 6, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_footer.scss */
 .footer-area .animation_icon_2 {
   position: absolute;
   left: 0;
-  top: -100px;
+  top: -10px;
+
+
 }
 
 @media (max-width: 991px) {
   /* line 6, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_footer.scss */
   .footer-area .animation_icon_2 {
     display: none;
+
   }
 }
 
@@ -3950,6 +3956,7 @@ ul {
   /* line 2, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_footer.scss */
   .footer-area {
     padding: 70px 0 20px;
+    z-index: 0;
   }
 }
 
@@ -6237,13 +6244,15 @@ h6 {
 .footer-area .animation_icon_2 {
   position: absolute;
   left: 0;
-  top: -100px;
+  top: -10px;
+  z-index: 0;
 }
 
 @media (max-width: 991px) {
   /* line 6, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_footer.scss */
   .footer-area .animation_icon_2 {
     display: none;
+    z-index: 0;
   }
 }
 
