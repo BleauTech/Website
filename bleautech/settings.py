@@ -148,5 +148,5 @@ MEDIA_URL='/media/'
 
 STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 
-if os.getcwd()=='/app':
-    DEBUG=False
+# if os.getcwd()=='/app':
+#     DEBUG=False
