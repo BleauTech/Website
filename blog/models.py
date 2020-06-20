@@ -13,6 +13,7 @@ class BlogPost(models.Model):
 
 	tags = TaggableManager()
 
+
 	author=models.ForeignKey(User, 
 		on_delete=models.CASCADE,
 		 related_name='blog_post')
