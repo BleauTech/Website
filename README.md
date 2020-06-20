@@ -2,6 +2,8 @@
 
 # BleauTech Official Website (Python/Django Based)
 
+<br>
+
 ## How to run this project local on your machine
 
 
@@ -57,3 +59,10 @@
 	<li>fire up your browser and run local host!!!</li>
   
 </ul>
+
+<br>
+
+## Deployment
+A test version of the website is currently live on Heroku
+
+<a href='https://bleautech-test.herokuapp.com/'>Click here</a> to check it out
