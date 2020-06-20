@@ -3,6 +3,8 @@
 # BleauTech Official Website (Python/Django Based)
 
 ## How to run this project local on your machine
+
+
 ### First Method(create virtual enviroment) - Reccommended
 <ul>
 	<li>you need to have python installed on your machine
@@ -34,6 +36,7 @@
   
 </ul>
 
+
 ### Second Method (No virtual enviroment) - not recommended
 
 <ul>
@@ -49,7 +52,6 @@
 	<li>run <b><em>pip install pillow</em></b></li>
   <br>
 	<li>use git to clone this repo </li>
-  <br>
 	<li>navigate to the cloned repo (on command line) and run the command <b><em>python manage.py runserver</em></b> </li>
   <br>
 	<li>fire up your browser and run local host!!!</li>
