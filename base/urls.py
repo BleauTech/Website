@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 import base.views as base_views
+from blog import urls as blog_urls
 
 
 
