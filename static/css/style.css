@@ -193,7 +193,7 @@ p {
   line-height: 1.929;
   font-size: 14px;
   margin-bottom: 0px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 /* line 103, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_common.scss */
@@ -1020,7 +1020,7 @@ ul {
 .causes_item .causes_text p {
   font-size: 14px;
   line-height: 24px;
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 0px;
 }
 
@@ -1168,7 +1168,7 @@ ul {
 
 /* line 490, /Applications/MAMP/htdocs/palash/cl/july 2019/192 Agency/192 Agency html/sass/_blog.scss */
 .categories_post .categories_details p {
-  font-weight: 300;
+  font-weight: 700;
   font-size: 14px;
   line-height: 26px;
   margin-bottom: 0px;
