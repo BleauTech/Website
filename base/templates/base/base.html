@@ -169,21 +169,18 @@
           <div class="col-xl-3 col-sm-6 col-md-3">
             <div class="single-footer-widget footer_2">
               <h4>Recent Blogs</h4>
+              {%for post in all_posts%}
               <div class="text">
-                <h5 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h5>
+                <h5 class="heading"><a href="{%url 'detail' post.pk%}">{{post.title}}</a></h5>
                 <div class="meta">
-                  <div> Sept 15, 2018</div>
-                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                  <div>{{post.created}}</div>
+                  <div><a href="#"><span class="icon-person"></span> {{post.author.first_name}}</a></div>
                 </div>
               </div>
+              <br>
+              {%endfor%}
             </div>
-            <div class="text">
-              <h5 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h5>
-              <div class="meta">
-                <div> Sept 15, 2018</div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-              </div>
-            </div>
+           
           </div>
           <div class="col-xl-3 col-sm-6 col-md-4">
             <div class="single-footer-widget footer_2">
