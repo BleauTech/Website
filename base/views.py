@@ -38,9 +38,9 @@ def contact_view(request):
 
 			sent=send_mail(subject=subject,
 				message=plain_message,
-				from_email='esiebomaj@gmail.com',
-				recipient_list=['esiebomaj@gmail.com', 'esiebomaje@gmail.com', 'bleauteche@gmail.com', 'rex4dom@gmail.com'],
-				fail_silently=True,
+				from_email='no-reply@bleautech.com',
+				recipient_list=['esiebomaj@gmail.com',],
+				fail_silently=False,
 				html_message=html_message )
 			context={'sent':sent}
 
@@ -57,3 +57,4 @@ def services_view(request):
 
 
 
+#   'bleauteche@gmail.com', 'rex4dom@gmail.com'

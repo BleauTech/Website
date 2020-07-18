@@ -16,10 +16,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST='smtp.mailgun.org'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = os.environ.get('gmail')
-EMAIL_HOST_PASSWORD = os.environ.get('gmail_password')
+EMAIL_HOST_USER = os.environ.get('mailgun_sandbox') 
+EMAIL_HOST_PASSWORD = os.environ.get('mailgun_sandbox_password') 
 EMAIL_USE_TLS= True
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +29,7 @@ EMAIL_USE_TLS= True
 SECRET_KEY = 'x4h9vdmk$y0%g!b#+_(blp#^_2)0pc@gpxdsiclu4l_^(=#7f4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
