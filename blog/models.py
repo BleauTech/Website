@@ -36,11 +36,6 @@ class BlogPost(models.Model):
 	def save(self):
 		super().save()
 
-		img=Image.open(self.image.path)
-		if img.height>300 or img.width>300:
-			img.thumbnail((400,400))
-			img.save(self.image.path)
- 
 
 # convinience function to get the month name
 	def get_month_name(self):

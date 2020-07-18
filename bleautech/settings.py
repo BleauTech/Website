@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'crispy_forms',
     'taggit',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -128,26 +129,60 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-STATIC_URL = '/static/'
-
-
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, 'static')
-]
-
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL='/media/'
+# USE_S3 = os.getenv('USE_S3') == 'TRUE'
+
+# if USE_S3:
+#     # aws settings
+#     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+#     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+#     AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+#     AWS_DEFAULT_ACL = None
+#     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+#     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+#     # s3 static settings
+#     STATIC_LOCATION = 'static'
+#     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+#     STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+#     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+#     STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder',
+#                             'django.contrib.staticfiles.finders.AppDirectoriesFinder',)
+#     # s3 public media settings
+#     PUBLIC_MEDIA_LOCATION = 'media'
+#     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+#     DEFAULT_FILE_STORAGE = 'bleautech.storage_backends.MediaStorage'
+# else:
+#     # STATIC_URL = '/staticfiles/'
+#     # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#     # MEDIA_URL = '/mediafiles/'
+#     # MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+#     STATIC_URL = '/static/'
+#     MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+#     MEDIA_URL='/media/'
+#     STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 
 
 
-STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 
-# if os.getcwd()=='/app':
-#     DEBUG=False
+
+AWS_ACCESS_KEY_ID = 'AKIA5EP2EPKRABWCVEPJ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'bleautech'
+AWS_DEFAULT_ACL = None
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+# s3 static settings
+STATIC_LOCATION = 'static'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+STATICFILES_STORAGE = 'bleautech.storage_backends.StaticStorage'
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder',
+                        'django.contrib.staticfiles.finders.AppDirectoriesFinder',)
+# s3 public media settings
+PUBLIC_MEDIA_LOCATION = 'media'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+DEFAULT_FILE_STORAGE = 'bleautech.storage_backends.MediaStorage'
