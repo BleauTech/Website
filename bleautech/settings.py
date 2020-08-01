@@ -18,8 +18,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = os.environ.get('mailgun_sandbox')
-EMAIL_HOST_PASSWORD = os.environ.get('mailgun_sandbox_password')
+EMAIL_HOST_USER = os.environ['mailgun_sandbox']
+EMAIL_HOST_PASSWORD = os.environ['mailgun_sandbox_password']
 EMAIL_USE_TLS = True
 
 # Quick-start development settings - unsuitable for production
@@ -139,10 +139,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 USE_S3 = os.getenv('USE_S3') == 'TRUE'
 
 if USE_S3:
-    # aws settings
-    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-    AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+    # aws settings 
+    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+    AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
     AWS_DEFAULT_ACL = None
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
