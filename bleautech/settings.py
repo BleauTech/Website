@@ -16,11 +16,11 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-EMAIL_HOST='smtp.mailgun.org'
+EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = os.environ.get('mailgun_sandbox') 
-EMAIL_HOST_PASSWORD = os.environ.get('mailgun_sandbox_password') 
-EMAIL_USE_TLS= True
+EMAIL_HOST_USER = os.environ.get('mailgun_sandbox')
+EMAIL_HOST_PASSWORD = os.environ.get('mailgun_sandbox_password')
+EMAIL_USE_TLS = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -29,7 +29,7 @@ EMAIL_USE_TLS= True
 SECRET_KEY = 'x4h9vdmk$y0%g!b#+_(blp#^_2)0pc@gpxdsiclu4l_^(=#7f4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -133,9 +133,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-
-#static settings 
-#including AWS static and media settings
+# static settings
+# including AWS static and media settings
 
 USE_S3 = os.getenv('USE_S3') == 'TRUE'
 
@@ -153,14 +152,13 @@ if USE_S3:
     STATICFILES_STORAGE = 'bleautech.storage_backends.StaticStorage'
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
     STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder',
-                            'django.contrib.staticfiles.finders.AppDirectoriesFinder',)
+                           'django.contrib.staticfiles.finders.AppDirectoriesFinder',)
     # s3 public media settings
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     DEFAULT_FILE_STORAGE = 'bleautech.storage_backends.MediaStorage'
 else:
     STATIC_URL = '/static/'
-    MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
-    MEDIA_URL='/media/'
-    STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
-
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
