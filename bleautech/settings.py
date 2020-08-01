@@ -136,7 +136,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # static settings
 # including AWS static and media settings
 
-USE_S3 = os.getenv('USE_S3') == 'TRUE'
+USE_S3 = os.environ['USE_S3'] == 'TRUE'
 
 if USE_S3:
     # aws settings 
