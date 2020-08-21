@@ -88,10 +88,27 @@ WSGI_APPLICATION = 'bleautech.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+
+# bleautech test database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd83bdfrm9o2nb1',
+#         'USER': 'bqgffyodgvhpwv',
+#         'PASSWORD': '7f2fd2cc07864e1d21f18638cdb054c3d48660cecc29231dac96242db12f9d0f',
+#         'HOST': 'ec2-52-87-135-240.compute-1.amazonaws.com',
+#         'PORT': '5432',                      # Set to empty string for default.
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd46u64opdn8nk5',
+        'USER': 'fbbityoodfdvhs',
+        'PASSWORD': '4cbd9837da38123b6160caf08d0c752f70455c8411ed84634db9522545860c29',
+        'HOST': 'ec2-50-17-90-177.compute-1.amazonaws.com',
+        'PORT': '5432',                      # Set to empty string for default.
     }
 }
 
@@ -139,7 +156,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 USE_S3 = os.environ['USE_S3'] == 'TRUE'
 
 if USE_S3:
-    # aws settings 
+    # aws settings
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
