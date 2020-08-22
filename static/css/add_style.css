@@ -1,3 +1,7 @@
-.small-img{
-   max-width: 50px;
+.small-img {
+  max-width: 50px;
+}
+.single-blog-img {
+  width: none !important;
+  height: 400px;
 }

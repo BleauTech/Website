@@ -47,7 +47,7 @@
               </li>
             </ul>
             <p class="excert">
-              {{post.text|linebreaks}}
+              {{post.text|safe|linebreaks}}
             </p>
           </div>
         </div>
@@ -248,7 +248,6 @@
               <li>
                 <a href="{%url 'tag_post_list' tag.slug%}" class="d-flex">
                   <p>{{tag}}</p>
-                  <p>(37)</p>
                 </a>
               </li>
               {%endfor%}

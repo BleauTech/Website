@@ -45,9 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'blog.apps.BlogConfig',
+    'ckeditor',
     'crispy_forms',
     'taggit',
-    'storages'
+    'storages',
+
 ]
 
 MIDDLEWARE = [
@@ -88,18 +90,6 @@ WSGI_APPLICATION = 'bleautech.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-
-# bleautech test database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'd83bdfrm9o2nb1',
-#         'USER': 'bqgffyodgvhpwv',
-#         'PASSWORD': '7f2fd2cc07864e1d21f18638cdb054c3d48660cecc29231dac96242db12f9d0f',
-#         'HOST': 'ec2-52-87-135-240.compute-1.amazonaws.com',
-#         'PORT': '5432',                      # Set to empty string for default.
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -179,3 +169,4 @@ else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     MEDIA_URL = '/media/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+

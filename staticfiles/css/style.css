@@ -3098,6 +3098,8 @@ ul {
   position: absolute;
   top: 0;
   left: 5%;
+  z-index: -1;
+  
 }
 
 @media (max-width: 991px) {
@@ -3939,6 +3941,7 @@ ul {
   position: absolute;
   left: 0;
   top: -10px;
+  z-index: -1;
 
 
 }
@@ -6244,7 +6247,7 @@ h6 {
   position: absolute;
   left: 0;
   top: -10px;
-  z-index: 0;
+  z-index: -1;
 }
 
 @media (max-width: 991px) {
